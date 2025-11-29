@@ -1,0 +1,30 @@
+
+{
+    "crops": [
+        "rice",
+        "wheat",
+        "sugarcane",
+        "millet",
+        "turmeric"
+    ],
+
+    "markets": [
+        { "market_id": 1, "name": "Karwar Market", "region": "Karwar" },
+        { "market_id": 2, "name": "Ankola Market", "region": "Uttara Kannada" }
+    ],
+
+    "prices": [
+        {
+            "crop": "rice",
+            "market_id": 1,
+            "daily_prices": []
+        }
+    ],
+
+    "demand_clusters": [],
+
+    "trend_history": {
+        "rice": [],
+        "wheat": []
+    }
+}
