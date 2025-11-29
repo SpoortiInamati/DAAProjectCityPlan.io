@@ -1,0 +1,10 @@
+
+{
+  "farm_zones": [
+    { "zone_id": 1, "moisture": 0 },
+    { "zone_id": 2, "moisture": 0 }
+  ],
+  "irrigation_channels": [
+    { "from": 0, "to": 1, "cost": 0 }
+  ]
+}
