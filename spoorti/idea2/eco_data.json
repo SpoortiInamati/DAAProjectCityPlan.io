@@ -1,0 +1,22 @@
+
+{
+    "locations": [
+        {"lat": 14.85, "lon": 74.13},
+        {"lat": 14.87, "lon": 74.10}
+    ],
+    "regions": [
+        {"x": 10, "y": 20, "name": "Forest"},
+        {"x": 30, "y": 40, "name": "Wetland"}
+    ],
+    "graph": {
+        "nodes": 5,
+        "edges": [
+            {"u":0, "v":1, "w":3},
+            {"u":1, "v":2, "w":4},
+            {"u":2, "v":3, "w":2}
+        ]
+    },
+    "search_keyword": "tiger",
+    "wildlife_notes": ["tiger seen near trail A", "elephants roaming"],
+    "crowd_level": 0.45
+}
