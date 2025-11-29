@@ -1,0 +1,25 @@
+
+{
+  "users": [
+    { "username": "buyer1", "hash": "hash_here" }
+  ],
+
+  "fish_listings": [
+    {
+      "id": "F001",
+      "name": "Tuna",
+      "weight": 45.2,
+      "basePrice": 1200
+    }
+  ],
+
+  "bids": [
+    { "buyer": "buyer1", "amount": 1500 }
+  ],
+
+  "graph": {
+    "edges": [
+      { "from": "dock", "to": "market", "cost": 5 }
+    ]
+  }
+}
