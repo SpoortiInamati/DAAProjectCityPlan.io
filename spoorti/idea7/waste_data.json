@@ -1,0 +1,17 @@
+
+{
+    "samples": [
+        {
+            "id": "",
+            "type": "",
+            "weight": 0,
+            "image_path": "",
+            "hazard_level": 0
+        }
+    ],
+    "system_config": {
+        "conveyor_speed": 0,
+        "arm_reach": 0,
+        "sorting_rules": {}
+    }
+}
