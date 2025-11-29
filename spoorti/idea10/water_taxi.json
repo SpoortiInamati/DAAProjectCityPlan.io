@@ -1,0 +1,29 @@
+{
+    "graph": {
+        "Karwar_Port": [
+            {"to": "Devbagh_Island", "cost": 4},
+            {"to": "Tilmatti_Beach", "cost": 6}
+        ],
+        "Devbagh_Island": [
+            {"to": "Karwar_Port", "cost": 4},
+            {"to": "Kurumasagara", "cost": 5}
+        ],
+        "Tilmatti_Beach": [
+            {"to": "Karwar_Port", "cost": 6}
+        ]
+    },
+    "boats": {
+        "Boat_A": true,
+        "Boat_B": false,
+        "Boat_C": true
+    },
+    "dock_status": {
+        "Karwar_Port": "Open",
+        "Devbagh_Island": "Open",
+        "Tilmatti_Beach": "Closed"
+    },
+    "clusters": {
+        "Zone_1": ["Karwar_Port","Devbagh_Island"],
+        "Zone_2": ["Tilmatti_Beach"]
+    }
+}
