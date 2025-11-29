@@ -1,0 +1,17 @@
+{
+  "grid": [
+    [0,0,0,1,0],
+    [0,1,0,0,0],
+    [0,0,0,1,0],
+    [0,0,1,0,0],
+    [0,0,0,0,0]
+  ],
+  "start": { "x": 0, "y": 0 },
+  "goal": { "x": 4, "y": 4 },
+  "waste_categories": {
+    "plastic": "blue_bin",
+    "metal": "red_bin",
+    "glass": "green_bin",
+    "organic": "brown_bin"
+  }
+}
