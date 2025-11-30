@@ -1,9 +1,157 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Smart Delivery Routing Platform</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello GitHub!</h1>
+
+<div class="container">
+
+    <h1 class="fancy-title">Smart Delivery Routing Platform</h1>
+
+
+    <img class="main-img" 
+    src="img1.png.png"
+    alt="Delivery Routing Image">
+
+    <h2>Description</h2>
+    <p>
+        A smart logistics platform that finds the fastest and most fuel-efficient
+        delivery routes using advanced graph algorithms, real-time traffic data,
+        and machine intelligence.
+    </p>
+
+    <!-- ---------------- ALGORITHM 1 ---------------- -->
+    <div class="algo-section">
+        <h2>Algorithm 1: Dijkstra's Algorithm</h2>
+
+        <p><b>How this algorithm is helpful?</b></p>
+        <ul>
+            <li>Computes shortest delivery routes.</li>
+            <li>Reduces fuel usage and travel cost.</li>
+            <li>Helps avoid high-traffic or long-distance roads.</li>
+        </ul>
+
+        <p><b>Efficiency:</b></p>
+        <ul>
+            <li>Time Complexity: <b>O((V + E) log V)</b></li>
+            <li>Space Complexity: <b>O(V)</b></li>
+        </ul>
+
+        <button class="btn" onclick="toggleCode('code1')">Show Algorithm Code</button>
+
+        <div id="code1" class="code-box">
+function dijkstra(graph, start):
+    dist[] = infinity
+    dist[start] = 0
+    pq = min-priority queue
+    pq.push((0, start))
+
+    while pq is not empty:
+        (currentDist, node) = pq.pop()
+
+        for each (neighbor, weight) in graph[node]:
+            if currentDist + weight < dist[neighbor]:
+                dist[neighbor] = currentDist + weight
+                pq.push((dist[neighbor], neighbor))
+
+    return dist
+        </div>
+    </div>
+
+    <!-- ---------------- ALGORITHM 2 ---------------- -->
+    <div class="algo-section">
+        <h2>Algorithm 2: A* Search Algorithm</h2>
+
+        <p><b>How this algorithm is helpful?</b></p>
+        <ul>
+            <li>Uses heuristics to estimate fastest path.</li>
+            <li>Efficient for real-time city navigation.</li>
+            <li>Used in modern delivery & ride apps.</li>
+        </ul>
+
+        <p><b>Efficiency:</b></p>
+        <ul>
+            <li>Time Complexity: <b>O(E)</b> (depends on heuristic)</li>
+            <li>Space Complexity: <b>O(V)</b></li>
+        </ul>
+
+        <button class="btn" onclick="toggleCode('code2')">Show Algorithm Code</button>
+
+        <div id="code2" class="code-box">
+function A*(start, goal):
+    openSet = priority queue
+    openSet.push(start)
+
+    gScore[start] = 0
+    fScore[start] = heuristic(start, goal)
+
+    while openSet not empty:
+        current = node with lowest fScore
+
+        if current == goal:
+            return reconstruct_path()
+
+        for each neighbor of current:
+            temp = gScore[current] + distance(current, neighbor)
+
+            if temp < gScore[neighbor]:
+                gScore[neighbor] = temp
+                fScore[neighbor] = temp + heuristic(neighbor, goal)
+                openSet.push(neighbor)
+
+    return failure
+        </div>
+    </div>
+
+    <!-- ---------------- ALGORITHM 3 ---------------- -->
+    <div class="algo-section">
+        <h2>Algorithm 3: Minimum Spanning Tree (Prim's Algorithm)</h2>
+
+        <p><b>How this algorithm is helpful?</b></p>
+        <ul>
+            <li>Helps connect all delivery points at minimum cost.</li>
+            <li>Efficient network planning for logistics.</li>
+            <li>Reduces infrastructure and operational costs.</li>
+        </ul>
+
+        <p><b>Efficiency:</b></p>
+        <ul>
+            <li>Time Complexity: <b>O(|E| log |V|)</b></li>
+        </ul>
+
+        <button class="btn" onclick="toggleCode('code3')">Show Algorithm Code</button>
+
+        <div id="code3" class="code-box">
+function primMST(graph):
+    key[] = infinity
+    parent[] = -1
+    mstSet[] = false
+    key[0] = 0
+
+    for count in 0 to V-1:
+        u = minKey(key, mstSet)
+        mstSet[u] = true
+
+        for each vertex v adjacent to u:
+            if not mstSet[v] and weight(u,v) < key[v]:
+                parent[v] = u
+                key[v] = weight(u,v)
+
+    return parent[]
+        </div>
+    </div>
+
+</div>
+
+<script>
+function toggleCode(id) {
+    let box = document.getElementById(id);
+    box.style.display = (box.style.display === "none") ? "block" : "none";
+}
+</script>
+
 </body>
 </html>
