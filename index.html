@@ -1,157 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Smart Delivery Routing Platform</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Tarangapur Smart City</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<header class="nav">
+  <div class="logo"><span class="wave">🌊</span> Tarangapur</div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="chandana">Chandana</a></li>
+      <li><a href="vidya">Vidya</a></li>
+      <li><a href="spoorti">Spoorti</a></li>
+      <li><a href="shubharani">Shubharani</a></li>
+     <li><a href="#project">Project</a></li>
 
-    <h1 class="fancy-title">Smart Delivery Routing Platform</h1>
+    </ul>
+  </nav>
+</header>
+</header>
 
 
-    <img class="main-img" 
-    src="img1.png.png"
-    alt="Delivery Routing Image">
 
-    <h2>Description</h2>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Tarangapur City</h1>
+    <p class="subtitle">A Smart Coastal City Designed for the Future</p>
+  </div>
+</section>
+
+
+<!-- ABOUT / COURSE -->
+<section class="about">
+
+  <div class="about-hero">
+    <h2>ABOUT TARANGAPUR</h2>
     <p>
-        A smart logistics platform that finds the fastest and most fuel-efficient
-        delivery routes using advanced graph algorithms, real-time traffic data,
-        and machine intelligence.
+      Tarangapur is not just a coastal city of waves and buildings —  
+  it is a living system designed with logic, efficiency, and intelligence.
+  Behind every road, harbor, and service lies a carefully planned algorithm
+  working silently to shape a smarter future.
     </p>
+  </div>
 
-    <!-- ---------------- ALGORITHM 1 ---------------- -->
-    <div class="algo-section">
-        <h2>Algorithm 1: Dijkstra's Algorithm</h2>
+  <div class="course-card">
 
-        <p><b>How this algorithm is helpful?</b></p>
-        <ul>
-            <li>Computes shortest delivery routes.</li>
-            <li>Reduces fuel usage and travel cost.</li>
-            <li>Helps avoid high-traffic or long-distance roads.</li>
-        </ul>
+    <div class="course-left">
+      <div class="badge">📘</div>
+      <h3>Design & Analysis of Algorithms</h3>
+      <p><strong>Course Code:</strong> 24ECSC205</p>
 
-        <p><b>Efficiency:</b></p>
-        <ul>
-            <li>Time Complexity: <b>O((V + E) log V)</b></li>
-            <li>Space Complexity: <b>O(V)</b></li>
-        </ul>
+      <div class="meta">
+        <p><strong>Instructor</strong><br>Prof. Prakash Hegade</p>
+        <p><strong>University</strong><br>KLE Technological University</p>
+      </div>
 
-        <button class="btn" onclick="toggleCode('code1')">Show Algorithm Code</button>
-
-        <div id="code1" class="code-box">
-function dijkstra(graph, start):
-    dist[] = infinity
-    dist[start] = 0
-    pq = min-priority queue
-    pq.push((0, start))
-
-    while pq is not empty:
-        (currentDist, node) = pq.pop()
-
-        for each (neighbor, weight) in graph[node]:
-            if currentDist + weight < dist[neighbor]:
-                dist[neighbor] = currentDist + weight
-                pq.push((dist[neighbor], neighbor))
-
-    return dist
-        </div>
+      <p class="project">
+        <strong>Project Topic</strong><br>
+        City Design — Tarangapur (Smart Coastal City)
+      </p>
     </div>
 
-    <!-- ---------------- ALGORITHM 2 ---------------- -->
-    <div class="algo-section">
-        <h2>Algorithm 2: A* Search Algorithm</h2>
+    <div class="course-right">
+      <h4>The Algorithmic Heart</h4>
 
-        <p><b>How this algorithm is helpful?</b></p>
-        <ul>
-            <li>Uses heuristics to estimate fastest path.</li>
-            <li>Efficient for real-time city navigation.</li>
-            <li>Used in modern delivery & ride apps.</li>
-        </ul>
+      <p>
+        The DAA course teaches how to choose the most efficient way to solve problems.
+        Instead of just writing code, we learn how to design solutions that are faster,
+        smarter, and cost-effective.
+      </p>
 
-        <p><b>Efficiency:</b></p>
-        <ul>
-            <li>Time Complexity: <b>O(E)</b> (depends on heuristic)</li>
-            <li>Space Complexity: <b>O(V)</b></li>
-        </ul>
+      <p>
+        Through this course, we understand how cities can be designed using logic,
+        planning, and performance optimization rather than trial and error.
+      </p>
 
-        <button class="btn" onclick="toggleCode('code2')">Show Algorithm Code</button>
-
-        <div id="code2" class="code-box">
-function A*(start, goal):
-    openSet = priority queue
-    openSet.push(start)
-
-    gScore[start] = 0
-    fScore[start] = heuristic(start, goal)
-
-    while openSet not empty:
-        current = node with lowest fScore
-
-        if current == goal:
-            return reconstruct_path()
-
-        for each neighbor of current:
-            temp = gScore[current] + distance(current, neighbor)
-
-            if temp < gScore[neighbor]:
-                gScore[neighbor] = temp
-                fScore[neighbor] = temp + heuristic(neighbor, goal)
-                openSet.push(neighbor)
-
-    return failure
-        </div>
+      <p>
+        Tarangapur represents a vision where computer science becomes the backbone of
+        urban development and innovation.
+      </p>
     </div>
 
-    <!-- ---------------- ALGORITHM 3 ---------------- -->
-    <div class="algo-section">
-        <h2>Algorithm 3: Minimum Spanning Tree (Prim's Algorithm)</h2>
+  </div>
 
-        <p><b>How this algorithm is helpful?</b></p>
-        <ul>
-            <li>Helps connect all delivery points at minimum cost.</li>
-            <li>Efficient network planning for logistics.</li>
-            <li>Reduces infrastructure and operational costs.</li>
-        </ul>
+</section>
 
-        <p><b>Efficiency:</b></p>
-        <ul>
-            <li>Time Complexity: <b>O(|E| log |V|)</b></li>
-        </ul>
+<!-- TEAM -->
+<section class="team">
+<h2 class="team-title">OUR TEAM</h2>
 
-        <button class="btn" onclick="toggleCode('code3')">Show Algorithm Code</button>
 
-        <div id="code3" class="code-box">
-function primMST(graph):
-    key[] = infinity
-    parent[] = -1
-    mstSet[] = false
-    key[0] = 0
-
-    for count in 0 to V-1:
-        u = minKey(key, mstSet)
-        mstSet[u] = true
-
-        for each vertex v adjacent to u:
-            if not mstSet[v] and weight(u,v) < key[v]:
-                parent[v] = u
-                key[v] = weight(u,v)
-
-    return parent[]
-        </div>
-    </div>
-
+  <div class="team-grid">
+    <div class="team-card">
+  <img src="chandana/image.png" alt="Chandana">
+  <h3>Chandana Naik</h3>
+  <h5>USN:01fe24bcs145</h5>
+    <h5>Roll NO:243</h5>
+  <a href="chandana">View My Profile</a>
 </div>
 
-<script>
-function toggleCode(id) {
-    let box = document.getElementById(id);
-    box.style.display = (box.style.display === "none") ? "block" : "none";
-}
-</script>
+<div class="team-card">
+  <img src="Spoorti/WhatsApp Image 2025-12-01 at 12.23.50 AM.jpeg" alt="Spoorti">
+  <h3>Spoorti Inamati</h3>
+  <h5>USN:01fe24bcs150</h5>
+    <h5>Roll NO:248</h5>
+  <a href="spoorti">View My Profile</a>
+</div>
+
+<div class="team-card">
+  <img src="shubharani.html/img2.jpeg" alt="Shubharani">
+  <h3>Shubharani Kulkarni</h3>
+  <h5>USN:01fe24bcs150</h5>
+    <h5>Roll NO:248</h5>
+<a href="shubharani.html">View My Profile</a>
+</div>
+
+<div class="team-card">
+  <img src="vidya/vidya.jpeg" alt="Vidya">
+  <h3>Vidya M Gadad</h3>
+  <h5>USN:01fe24bcs150</h5>
+    <h5>Roll NO:248</h5>
+  <a href="vidya">View My Profile</a>
+</div>
+
+  </div>
+</section>
+
+<footer>
+<footer>
+ <div class="social-icons">
+  <!-- GitHub -->
+  <a href="index.html" class="icon">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="#333">
+      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.26.82-.577v-2.165c-3.338.724-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.082-.729.082-.729 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.76-1.604-2.665-.303-5.466-1.332-5.466-5.931 0-1.31.468-2.381 1.235-3.221-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.53 11.53 0 013.003-.404c1.02.005 2.045.137 3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.654 1.653.242 2.873.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.807 5.625-5.479 5.921.43.37.813 1.096.813 2.21v3.277c0 .32.218.694.825.576C20.565 21.796 24 17.298 24 12c0-6.63-5.37-12-12-12z"/>
+    </svg>
+  </a>
+
+  <!-- Twitter -->
+  <a href="index.html" class="icon">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="#1DA1F2">
+      <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.897-.957-2.178-1.555-3.594-1.555-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124-4.09-.205-7.719-2.165-10.148-5.144-.424.729-.666 1.577-.666 2.476 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.247-2.229-.616v.061c0 2.386 1.697 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.317 0-.626-.03-.928-.086.627 1.956 2.444 3.376 4.6 3.416-1.68 1.317-3.809 2.104-6.102 2.104-.396 0-.788-.023-1.175-.068 2.179 1.397 4.768 2.212 7.557 2.212 9.054 0 14-7.496 14-13.986 0-.21 0-.423-.015-.634.962-.694 1.8-1.562 2.46-2.549z"/>
+    </svg>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="index.html" class="icon">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="#0077B5">
+      <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8h4.55v16H.22V8zM7.98 8h4.37v2.18h.06c.61-1.15 2.1-2.37 4.32-2.37 4.63 0 5.48 3.05 5.48 7v8.19h-4.56v-7.27c0-1.73-.03-3.96-2.41-3.96-2.41 0-2.78 1.88-2.78 3.83v7.4H7.98V8z"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+ <a href="index.html" class="icon">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="#E1306C">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 1.97.248 2.43.415a4.92 4.92 0 011.743 1.01 4.922 4.922 0 011.01 1.743c.167.46.36 1.26.415 2.43.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.248 1.97-.415 2.43a4.916 4.916 0 01-1.01 1.743 4.922 4.922 0 01-1.743 1.01c-.46.167-1.26.36-2.43.415-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.248-2.43-.415a4.922 4.922 0 01-1.743-1.01 4.92 4.92 0 01-1.01-1.743c-.167-.46-.36-1.26-.415-2.43-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.056-1.17.248-1.97.415-2.43a4.922 4.922 0 011.01-1.743 4.922 4.922 0 011.743-1.01c.46-.167 1.26-.36 2.43-.415C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.736 0 8.332.014 7.052.072 5.775.13 4.905.346 4.163.648a6.92 6.92 0 00-2.513 1.634 6.924 6.924 0 00-1.634 2.513C-.346 5.095-.13 5.965-.072 7.242-.014 8.522 0 8.927 0 12c0 3.073-.014 3.478-.072 4.758-.058 1.277-.274 2.147-.576 2.889a6.924 6.924 0 001.634 2.513 6.922 6.922 0 002.513 1.634c.742.302 1.612.518 2.889.576C8.332 23.986 8.736 24 12 24s3.668-.014 4.948-.072c1.277-.058 2.147-.274 2.889-.576a6.922 6.922 0 002.513-1.634 6.922 6.922 0 001.634-2.513c.302-.742.518-1.612.576-2.889.058-1.28.072-1.684.072-4.758s-.014-3.478-.072-4.758c-.058-1.277-.274-2.147-.576-2.889a6.922 6.922 0 00-1.634-2.513 6.922 6.922 0 00-2.513-1.634c-.742-.302-1.612-.518-2.889-.576C15.668.014 15.264 0 12 0z"/>
+      <circle cx="12" cy="12" r="3.6"/>
+      <circle cx="18.406" cy="5.594" r="1.44"/>
+    </svg>
+  </a>
+</div>
+</footer>
+
+</footer>
 
 </body>
 </html>
