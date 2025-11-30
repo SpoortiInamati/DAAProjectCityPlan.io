@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Solar Micro-Grid Company (SDG 7)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 🔥 Fancy Animated Title -->
+    <h1 class="fancy-title">Solar Micro-Grid Company (SDG 7)</h1>
+
+    <!-- Main Image -->
+
+    <h2>Description</h2>
+    <p>
+        A sustainable energy business that installs rooftop solar panels and builds 
+        community-level micro-grids to provide clean, affordable, and reliable electricity 
+        for homes, markets, and public places.
+    </p>
+
+    <!-- ---------------- ALGORITHM 1 ---------------- -->
+    <div class="algo-section">
+        <h2>Algorithm 1: Solar Power Forecasting (Time-Series Prediction)</h2>
+
+        <p><b>How this algorithm is helpful?</b></p>
+        <ul>
+            <li>Predicts daily solar energy production.</li>
+            <li>Helps manage power distribution across the micro-grid.</li>
+            <li>Reduces reliance on backup batteries and saves cost.</li>
+        </ul>
+
+        <p><b>Efficiency:</b></p>
+        <ul>
+            <li>Time Complexity: <b>O(n)</b> per forecast cycle</li>
+            <li>Space Complexity: <b>O(n)</b></li>
+        </ul>
+
+        <button class="btn" onclick="toggleCode('code1')">Show Algorithm Code</button>
+
+        <div id="code1" class="code-box">
+function forecastSolar(powerData):
+    avg = movingAverage(powerData)
+    trend = calculateTrend(powerData)
+    predicted = avg + trend
+    return predicted
+        </div>
+    </div>
+
+    <!-- ---------------- ALGORITHM 2 ---------------- -->
+    <div class="algo-section">
+        <h2>Algorithm 2: Load Balancing Algorithm for Micro-Grid</h2>
+
+        <p><b>How this algorithm is helpful?</b></p>
+        <ul>
+            <li>Distributes electricity efficiently across homes.</li>
+            <li>Prevents overload and power failures.</li>
+            <li>Ensures stable electricity supply from solar + battery.</li>
+        </ul>
+
+        <p><b>Efficiency:</b></p>
+        <ul>
+            <li>Time Complexity: <b>O(H)</b> where H = number of households</li>
+            <li>Space Complexity: <b>O(H)</b></li>
+        </ul>
+
+        <button class="btn" onclick="toggleCode('code2')">Show Algorithm Code</button>
+
+        <div id="code2" class="code-box">
+function balanceLoad(houses, solarOutput):
+    for each house in houses:
+        allocate = solarOutput / houses.count
+        if house.demand > allocate:
+            supplyFromBattery(house)
+        else:
+            provideSolar(house)
+    return updatedDistribution
+        </div>
+    </div>
+
+    <!-- ---------------- ALGORITHM 3 ---------------- -->
+    <div class="algo-section">
+        <h2>Algorithm 3: Battery Charge Optimization (Greedy Algorithm)</h2>
+
+        <p><b>How this algorithm is helpful?</b></p>
+        <ul>
+            <li>Ensures battery stores maximum energy during sunlight hours.</li>
+            <li>Reduces battery wear and increases lifespan.</li>
+            <li>Keeps power stable during night and cloudy days.</li>
+        </ul>
+
+        <p><b>Efficiency:</b></p>
+        <ul>
+            <li>Time Complexity: <b>O(n)</b></li>
+            <li>Space Complexity: <b>O(1)</b></li>
+        </ul>
+
+        <button class="btn" onclick="toggleCode('code3')">Show Algorithm Code</button>
+
+        <div id="code3" class="code-box">
+function optimizeBattery(solarOutput, batteryCapacity):
+    if solarOutput > batteryCapacity.remaining:
+        charge(batteryCapacity.remaining)
+    else:
+        charge(solarOutput)
+    return batteryStatus
+        </div>
+    </div>
+
+</div>
+
+<script>
+function toggleCode(id) {
+    let box = document.getElementById(id);
+    box.style.display = (box.style.display === "none") ? "block" : "none";
+}
+</script>
+
+</body>
+</html>
