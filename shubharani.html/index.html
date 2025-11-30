@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Solar Micro-Grid Company (SDG 7)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container">
+
+  <!-- Animated title -->
+  <h1 class="fancy-title">Solar Micro-Grid Company (SDG 7)</h1>
+
+  <!-- main image -->
+
+  <h2>Description</h2>
+  <p class="lead">
+    A sustainable energy business that installs rooftop solar panels and builds
+    community-level micro-grids to provide clean, affordable, and reliable electricity
+    for homes, markets, and public places.
+  </p>
+
+  <!-- ALGORITHM 1 -->
+  <section class="algo-section">
+    <h2>Algorithm 1: Solar Power Forecasting (Time-Series Prediction)</h2>
+
+    <p><strong>How this algorithm is helpful?</strong></p>
+    <ul>
+      <li>Predicts daily solar energy production.</li>
+      <li>Helps manage power distribution across the micro-grid.</li>
+      <li>Reduces reliance on backup batteries and saves cost.</li>
+    </ul>
+
+    <p><strong>Efficiency:</strong></p>
+    <ul>
+      <li>Time Complexity: <strong>O(n)</strong> per forecast cycle</li>
+      <li>Space Complexity: <strong>O(n)</strong></li>
+    </ul>
+
+    <button class="btn" onclick="toggleCode('code1')">Show Algorithm Code</button>
+
+    <pre id="code1" class="code-box">
+function forecastSolar(powerData):
+    avg = movingAverage(powerData)
+    trend = calculateTrend(powerData)
+    predicted = avg + trend
+    return predicted
+    </pre>
+  </section>
+
+  <!-- ALGORITHM 2 -->
+  <section class="algo-section">
+    <h2>Algorithm 2: Load Balancing Algorithm for Micro-Grid</h2>
+
+    <p><strong>How this algorithm is helpful?</strong></p>
+    <ul>
+      <li>Distributes electricity efficiently across homes.</li>
+      <li>Prevents overload and power failures.</li>
+      <li>Ensures stable electricity supply from solar + battery.</li>
+    </ul>
+
+    <p><strong>Efficiency:</strong></p>
+    <ul>
+      <li>Time Complexity: <strong>O(H)</strong> where H = number of households</li>
+      <li>Space Complexity: <strong>O(H)</strong></li>
+    </ul>
+
+    <button class="btn" onclick="toggleCode('code2')">Show Algorithm Code</button>
+
+    <pre id="code2" class="code-box">
+function balanceLoad(houses, solarOutput):
+    for each house in houses:
+        allocate = solarOutput / houses.count
+        if house.demand > allocate:
+            supplyFromBattery(house)
+        else:
+            provideSolar(house)
+    return updatedDistribution
+    </pre>
+  </section>
+
+  <!-- ALGORITHM 3 -->
+  <section class="algo-section">
+    <h2>Algorithm 3: Battery Charge Optimization (Greedy Algorithm)</h2>
+
+    <p><strong>How this algorithm is helpful?</strong></p>
+    <ul>
+      <li>Ensures battery stores maximum energy during sunlight hours.</li>
+      <li>Reduces battery wear and increases lifespan.</li>
+      <li>Keeps power stable during night and cloudy days.</li>
+    </ul>
+
+    <p><strong>Efficiency:</strong></p>
+    <ul>
+      <li>Time Complexity: <strong>O(n)</strong></li>
+      <li>Space Complexity: <strong>O(1)</strong></li>
+    </ul>
+
+    <button class="btn" onclick="toggleCode('code3')">Show Algorithm Code</button>
+
+    <pre id="code3" class="code-box">
+function optimizeBattery(solarOutput, batteryCapacity):
+    if solarOutput > batteryCapacity.remaining:
+        charge(batteryCapacity.remaining)
+    else:
+        charge(solarOutput)
+    return batteryStatus
+    </pre>
+  </section>
+
+</main>
+
+<script>
+  /* simple toggle function used by the three buttons */
+  function toggleCode(id){
+    const el = document.getElementById(id);
+    if(!el) return;
+    el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+  }
+
+  /* optionally hide code boxes on load (they are hidden by CSS already) */
+  document.addEventListener('DOMContentLoaded', ()=> {
+    ['code1','code2','code3'].forEach(id => {
+      const el = document.getElementById(id);
+      if(el) el.style.display = 'none';
+    });
+  });
+</script>
+
+</body>
+</html>
