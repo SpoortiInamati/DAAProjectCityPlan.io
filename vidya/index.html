@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Solar Micro-Grid Company (SDG 7)</title>
+<title>Autonomous Delivery Drone Routing Service</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,102 +10,118 @@
 <div class="container">
 
     <!-- 🔥 Fancy Animated Title -->
-    <h1 class="fancy-title">Solar Micro-Grid Company (SDG 7)</h1>
+    <h1 class="fancy-title">Autonomous Delivery Drone Routing Service</h1>
 
     <!-- Main Image -->
-
     <h2>Description</h2>
     <p>
-        A sustainable energy business that installs rooftop solar panels and builds 
-        community-level micro-grids to provide clean, affordable, and reliable electricity 
-        for homes, markets, and public places.
+        An advanced logistics system that uses autonomous drones for fast, 
+        efficient, and eco-friendly delivery of goods. The platform optimizes drone routes, 
+        manages battery usage, ensures collision-free navigation, and reduces delivery time 
+        for e-commerce, food delivery, medicine transport, and emergency supplies.
     </p>
 
     <!-- ---------------- ALGORITHM 1 ---------------- -->
     <div class="algo-section">
-        <h2>Algorithm 1: Solar Power Forecasting (Time-Series Prediction)</h2>
+        <h2>Algorithm 1: Drone Route Optimization (A* Search Algorithm)</h2>
 
         <p><b>How this algorithm is helpful?</b></p>
         <ul>
-            <li>Predicts daily solar energy production.</li>
-            <li>Helps manage power distribution across the micro-grid.</li>
-            <li>Reduces reliance on backup batteries and saves cost.</li>
+            <li>Finds the fastest and safest flight route avoiding obstacles.</li>
+            <li>Ensures minimal travel distance and time.</li>
+            <li>Reduces battery usage and operational cost.</li>
         </ul>
 
         <p><b>Efficiency:</b></p>
         <ul>
-            <li>Time Complexity: <b>O(n)</b> per forecast cycle</li>
-            <li>Space Complexity: <b>O(n)</b></li>
+            <li>Time Complexity: <b>O(E log V)</b></li>
+            <li>Space Complexity: <b>O(V)</b></li>
         </ul>
 
         <button class="btn" onclick="toggleCode('code1')">Show Algorithm Code</button>
 
         <div id="code1" class="code-box">
-function forecastSolar(powerData):
-    avg = movingAverage(powerData)
-    trend = calculateTrend(powerData)
-    predicted = avg + trend
-    return predicted
+function Astar(start, goal):
+    openSet = priorityQueue()
+    openSet.push(start)
+
+    while openSet is not empty:
+        current = openSet.popLowestCost()
+
+        if current == goal:
+            return reconstructPath(current)
+
+        for each neighbor in current.neighbors:
+            cost = current.g + distance(current, neighbor)
+            if cost < neighbor.g:
+                neighbor.g = cost
+                neighbor.f = cost + heuristic(neighbor, goal)
+                openSet.push(neighbor)
+    return failure
         </div>
     </div>
 
     <!-- ---------------- ALGORITHM 2 ---------------- -->
     <div class="algo-section">
-        <h2>Algorithm 2: Load Balancing Algorithm for Micro-Grid</h2>
+        <h2>Algorithm 2: Drone Collision Avoidance (Sensor-Based Detection)</h2>
 
         <p><b>How this algorithm is helpful?</b></p>
         <ul>
-            <li>Distributes electricity efficiently across homes.</li>
-            <li>Prevents overload and power failures.</li>
-            <li>Ensures stable electricity supply from solar + battery.</li>
+            <li>Prevents mid-air collisions with buildings, trees, or other drones.</li>
+            <li>Uses ultrasonic, LiDAR, and camera data for real-time obstacle detection.</li>
+            <li>Keeps the drone flight stable and secure.</li>
         </ul>
 
         <p><b>Efficiency:</b></p>
         <ul>
-            <li>Time Complexity: <b>O(H)</b> where H = number of households</li>
-            <li>Space Complexity: <b>O(H)</b></li>
+            <li>Time Complexity: <b>O(n)</b> for scanning surroundings.</li>
+            <li>Space Complexity: <b>O(1)</b></li>
         </ul>
 
         <button class="btn" onclick="toggleCode('code2')">Show Algorithm Code</button>
 
         <div id="code2" class="code-box">
-function balanceLoad(houses, solarOutput):
-    for each house in houses:
-        allocate = solarOutput / houses.count
-        if house.demand > allocate:
-            supplyFromBattery(house)
-        else:
-            provideSolar(house)
-    return updatedDistribution
+function avoidCollision(drone):
+    obstacles = scanSurroundings()
+
+    for each obj in obstacles:
+        if distance(drone, obj) < safetyLimit:
+            adjustPath(drone, obj.position)
+    return drone.newPath
         </div>
     </div>
 
     <!-- ---------------- ALGORITHM 3 ---------------- -->
     <div class="algo-section">
-        <h2>Algorithm 3: Battery Charge Optimization (Greedy Algorithm)</h2>
+        <h2>Algorithm 3: Battery & Payload Optimization (Greedy Approach)</h2>
 
         <p><b>How this algorithm is helpful?</b></p>
         <ul>
-            <li>Ensures battery stores maximum energy during sunlight hours.</li>
-            <li>Reduces battery wear and increases lifespan.</li>
-            <li>Keeps power stable during night and cloudy days.</li>
+            <li>Maximizes battery usage for long-distance delivery.</li>
+            <li>Balances weight distribution for stable flight.</li>
+            <li>Ensures drone returns to base safely after delivery.</li>
         </ul>
 
         <p><b>Efficiency:</b></p>
         <ul>
-            <li>Time Complexity: <b>O(n)</b></li>
+            <li>Time Complexity: <b>O(1)</b></li>
             <li>Space Complexity: <b>O(1)</b></li>
         </ul>
 
         <button class="btn" onclick="toggleCode('code3')">Show Algorithm Code</button>
 
         <div id="code3" class="code-box">
-function optimizeBattery(solarOutput, batteryCapacity):
-    if solarOutput > batteryCapacity.remaining:
-        charge(batteryCapacity.remaining)
+function optimizeBattery(drone):
+    if drone.payloadWeight > maxLimit:
+        reducePayload(drone)
+
+    requiredEnergy = calculateEnergy(drone.distance)
+
+    if requiredEnergy < drone.battery:
+        allowFlight()
     else:
-        charge(solarOutput)
-    return batteryStatus
+        rerouteToChargingStation()
+    return updatedStatus
         </div>
     </div>
 
